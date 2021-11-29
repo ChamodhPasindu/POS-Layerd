@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginContext" prefHeight="650.0" prefWidth="1200.0" style="-fx-background-color: C7E9DA;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LogInFormController">
+   <children>
+      <AnchorPane layoutX="140.0" layoutY="75.0" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: white;" styleClass="pane-log" stylesheets="@style/styles.css">
+         <children>
+            <ImageView fitHeight="353.0" fitWidth="503.0" layoutY="65.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assets/courier-sales-agent-meeting-consumer_1262-19234.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="395.0" layoutY="14.0" text="Welcome Back!">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="593.0" layoutY="93.0" text="Login to your account">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtName" labelFloat="true" layoutX="593.0" layoutY="180.0" prefHeight="45.0" prefWidth="250.0" promptText="User Name">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="txtPassword" labelFloat="true" layoutX="593.0" layoutY="263.0" prefHeight="45.0" prefWidth="250.0" promptText="Password">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton layoutX="593.0" layoutY="398.0" onAction="#loginBtnOnAction" prefHeight="45.0" prefWidth="250.0" style="-fx-background-color: #FF3232;" styleClass="btn" text="LogIn" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

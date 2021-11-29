@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="580.0" prefWidth="885.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminIncomeReportsController">
+   <children>
+      <AnchorPane prefHeight="604.0" prefWidth="987.0" style="-fx-background-color: E9EEF9;">
+         <children>
+            <Pane layoutX="10.0" layoutY="6.0" prefHeight="48.0" prefWidth="970.0" style="-fx-background-color: #CACACA;" styleClass="pane-two" stylesheets="@style/styles.css">
+               <children>
+                  <Label layoutX="14.0" layoutY="9.0" text="Income Reports">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="631.0" layoutY="95.0" prefHeight="483.0" prefWidth="317.0" style="-fx-background-color: white;" styleClass="pane-two" stylesheets="@style/styles.css">
+               <children>
+                  <Label layoutX="82.0" layoutY="22.0" text="Check Income ">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="43.0" layoutY="65.0" prefHeight="396.0" prefWidth="232.0" style="-fx-background-color: #98BBF4;" styleClass="pane-two">
+                     <children>
+                        <Label alignment="CENTER" layoutX="20.0" layoutY="118.0" prefHeight="35.0" prefWidth="192.0" text="Number Of Orders" textFill="#221717">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblNoOfOrders" alignment="CENTER" layoutX="38.0" layoutY="153.0" prefHeight="80.0" prefWidth="157.0" style="-fx-background-color: white;">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="21.0" layoutY="248.0" prefHeight="35.0" prefWidth="192.0" text="Total Income" textFill="#221717">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTotalIncome" alignment="CENTER" layoutX="37.0" layoutY="283.0" prefHeight="80.0" prefWidth="157.0" style="-fx-background-color: white;">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="txtForm" layoutX="31.0" layoutY="24.0" prefHeight="25.0" prefWidth="170.0" promptText="From" />
+                        <DatePicker fx:id="txtTo" layoutX="32.0" layoutY="59.0" prefHeight="25.0" prefWidth="170.0" promptText="To" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane layoutX="24.0" layoutY="95.0" prefHeight="483.0" prefWidth="577.0" style="-fx-background-color: white;" styleClass="pane-two" stylesheets="@style/styles.css">
+               <children>
+                  <TableView fx:id="tblCustomerList" layoutX="17.0" layoutY="73.0" prefHeight="396.0" prefWidth="543.0">
+                     <columns>
+                        <TableColumn fx:id="colCustId" prefWidth="101.0" text="Customer Id" />
+                        <TableColumn fx:id="colCustName" prefWidth="138.0" text="Customer Name" />
+                        <TableColumn fx:id="colAddress" prefWidth="124.0" text="Address" />
+                        <TableColumn fx:id="colNoOfOrders" prefWidth="77.0" text="No. of Order" />
+                        <TableColumn fx:id="colPayment" prefWidth="103.0" text="Payment" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="17.0" layoutY="14.0" text="Customer Wise Income">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

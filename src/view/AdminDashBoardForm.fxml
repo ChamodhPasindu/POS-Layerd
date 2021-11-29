@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashBoardFormController">
+   <children>
+      <AnchorPane fx:id="dashBoardContext" prefHeight="650.0" prefWidth="1200.0" style="-fx-background-color: #F6F6F6;">
+         <children>
+            <AnchorPane layoutY="48.0" prefHeight="604.0" prefWidth="218.0" style="-fx-background-color: E9EEF9;">
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="21.0" layoutY="531.0" onAction="#openDashBoardOnAction" prefHeight="35.0" prefWidth="176.0" style="-fx-background-color: #FF3232;" text="Log Out" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="21.0" layoutY="331.0" onAction="#openIncomeReportsOnAction" prefHeight="48.0" prefWidth="176.0" style="-fx-background-color: #5050FF;" text="Income Reports" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="21.0" layoutY="149.0" onAction="#openAdminAddItemOnAction" prefHeight="48.0" prefWidth="176.0" style="-fx-background-color: #5050FF;" text="Add Item" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="21.0" layoutY="210.0" onAction="#openAdminManageItemsOnAction" prefHeight="48.0" prefWidth="176.0" style="-fx-background-color: #5050FF;" text="Manage Items" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="21.0" layoutY="90.0" onAction="#openAdminDashBoardFormOnAction" prefHeight="48.0" prefWidth="176.0" style="-fx-background-color: #5050FF;" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="21.0" layoutY="272.0" onAction="#openAdminRemoveItemsOnAction" prefHeight="48.0" prefWidth="176.0" style="-fx-background-color: #5050FF;" text="Remove Items" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <Pane layoutX="12.0" layoutY="8.0" prefHeight="48.0" prefWidth="195.0" style="-fx-background-color: #CACACA;" styleClass="pane-two" stylesheets="@style/styles.css">
+                     <children>
+                        <Label alignment="CENTER" layoutX="2.0" layoutY="9.0" prefHeight="30.0" prefWidth="195.0" text="ADMIN">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="subContext" layoutX="213.0" layoutY="48.0" prefHeight="604.0" prefWidth="987.0" style="-fx-background-color: E9EEF9;">
+               <children>
+                  <Separator layoutX="265.0" layoutY="186.0" orientation="VERTICAL" prefHeight="307.0" prefWidth="7.0" />
+                  <Pane layoutX="9.0" layoutY="7.0" prefHeight="48.0" prefWidth="970.0" style="-fx-background-color: #CACACA;" styleClass="pane-two" stylesheets="@style/styles.css">
+                     <children>
+                        <Label layoutX="14.0" layoutY="9.0" text="Dashboard">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="26.0" layoutY="90.0" prefHeight="477.0" prefWidth="472.0" style="-fx-background-color: white;" styleClass="pane-two" stylesheets="@style/styles.css">
+                     <children>
+                        <Label layoutX="28.0" layoutY="37.0" text="Most Movable Iteam">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtMostItemCode" labelFloat="true" layoutX="28.0" layoutY="119.0" prefHeight="25.0" prefWidth="195.0" promptText="Item Code" />
+                        <JFXTextField fx:id="txtMostDescription" labelFloat="true" layoutX="28.0" layoutY="182.0" prefHeight="25.0" prefWidth="195.0" promptText="Description" />
+                        <JFXTextField fx:id="txtMostQty" labelFloat="true" layoutX="28.0" layoutY="250.0" prefHeight="25.0" prefWidth="195.0" promptText="Quantity On Hand" />
+                        <JFXTextField fx:id="txtMostUnitPrice" labelFloat="true" layoutX="28.0" layoutY="319.0" prefHeight="25.0" prefWidth="195.0" promptText="Unit Price" />
+                        <JFXTextField fx:id="txtMostDiscount" labelFloat="true" layoutX="28.0" layoutY="374.0" prefHeight="25.0" prefWidth="195.0" promptText="Discount" />
+                        <Label layoutX="258.0" layoutY="40.0" text="Least Movable Iteam">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtLeastItemCode" labelFloat="true" layoutX="259.0" layoutY="122.0" prefHeight="25.0" prefWidth="195.0" promptText="Item Code" />
+                        <JFXTextField fx:id="txtLeastDescription" labelFloat="true" layoutX="259.0" layoutY="185.0" prefHeight="25.0" prefWidth="195.0" promptText="Description" />
+                        <JFXTextField fx:id="txtLeastQty" labelFloat="true" layoutX="259.0" layoutY="251.0" prefHeight="25.0" prefWidth="195.0" promptText="Quantity On Hand" />
+                        <JFXTextField fx:id="txtLeastUnitPrice" labelFloat="true" layoutX="259.0" layoutY="322.0" prefHeight="25.0" prefWidth="195.0" promptText="Unit Price" />
+                        <JFXTextField fx:id="txtLeastDiscount" labelFloat="true" layoutX="259.0" layoutY="377.0" prefHeight="25.0" prefWidth="195.0" promptText="Discount" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="543.0" layoutY="90.0" prefHeight="477.0" prefWidth="410.0" style="-fx-background-color: white;" styleClass="pane-two" stylesheets="@style/styles.css">
+                     <children>
+                        <Label layoutX="180.0" layoutY="36.0" text="Item List">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tblItemList" layoutX="36.0" layoutY="102.0" prefHeight="294.0" prefWidth="339.0">
+                          <columns>
+                            <TableColumn fx:id="colItemCode" prefWidth="164.0" text="Item Code" />
+                            <TableColumn fx:id="colDescription" prefWidth="174.0" text="Description" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+               </children></AnchorPane>
+            <Pane prefHeight="48.0" prefWidth="1200.0" style="-fx-background-color: #5773F1;">
+               <children>
+                  <Label layoutX="14.0" layoutY="2.0" prefHeight="30.0" prefWidth="294.0" text="Idea supermarket" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

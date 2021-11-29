@@ -1,0 +1,14 @@
+.pane-log{
+    -fx-background-radius: 40px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+}
+.btn{
+    -fx-background-radius: 30px;
+}
+.pane-one{
+    -fx-background-radius: 10px;
+}
+.pane-two{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 2, 0, 0, 0);
+    -fx-background-radius: 12px;
+}
